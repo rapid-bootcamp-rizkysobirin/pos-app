@@ -16,9 +16,9 @@ namespace POS.DataContext
         [Column("id")]
         public int Id { get; set; }
         [Column("category_name")]
-        public String CategoryName { get; set; }
+        public string CategoryName { get; set; }
         [Column("description")]
-        public String Description { get; set; }
+        public string Description { get; set; }
 
         public ICollection<Products> Product { get; set; }
 

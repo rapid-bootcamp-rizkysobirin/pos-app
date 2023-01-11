@@ -38,5 +38,7 @@ namespace POS.Repository
         public string ShipAddress { get; set; }
         [Column("ship_city")]
         public string ShipCity { get; set; }
+
+        public ICollection<Orders> Order { get; set; }
     }
 }

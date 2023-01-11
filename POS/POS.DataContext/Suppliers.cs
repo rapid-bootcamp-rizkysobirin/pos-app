@@ -37,6 +37,6 @@ namespace POS.Repository
         [Column("home_page")]
         public string HomePage { get; set; }
 
-        public ICollection<Products> Products { get; set; }
+        public ICollection<Products> Product { get; set; }
     }
 }

@@ -109,7 +109,8 @@ namespace POS.WEB.Migrations
                     freight = table.Column<int>(type: "int", nullable: false),
                     ship_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ship_address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ship_city = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ship_city = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    OrdersId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -126,6 +127,11 @@ namespace POS.WEB.Migrations
                         principalTable: "tbl_employees",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_tbl_orders_tbl_orders_OrdersId",
+                        column: x => x.OrdersId,
+                        principalTable: "tbl_orders",
+                        principalColumn: "id");
                 });
 
             migrationBuilder.CreateTable(
@@ -162,6 +168,45 @@ namespace POS.WEB.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "tbl_order_details",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OrdersId = table.Column<int>(type: "int", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    unit_price = table.Column<int>(type: "int", nullable: false),
+                    quantity = table.Column<long>(type: "bigint", nullable: false),
+                    discount = table.Column<double>(type: "float", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tbl_order_details", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_tbl_order_details_tbl_orders_OrdersId",
+                        column: x => x.OrdersId,
+                        principalTable: "tbl_orders",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_tbl_order_details_tbl_products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "tbl_products",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tbl_order_details_OrdersId",
+                table: "tbl_order_details",
+                column: "OrdersId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tbl_order_details_ProductId",
+                table: "tbl_order_details",
+                column: "ProductId");
+
             migrationBuilder.CreateIndex(
                 name: "IX_tbl_orders_customer_id",
                 table: "tbl_orders",
@@ -171,6 +216,11 @@ namespace POS.WEB.Migrations
                 name: "IX_tbl_orders_employee_id",
                 table: "tbl_orders",
                 column: "employee_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_tbl_orders_OrdersId",
+                table: "tbl_orders",
+                column: "OrdersId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_tbl_products_CategoriesId",
@@ -185,6 +235,9 @@ namespace POS.WEB.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "tbl_order_details");
+
             migrationBuilder.DropTable(
                 name: "tbl_orders");
 

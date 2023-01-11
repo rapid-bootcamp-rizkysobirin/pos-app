@@ -17,12 +17,17 @@ namespace POS.Repository
         public int Id { get; set; }
         [Column("product_name")]
         public string ProductName { get; set; }
+
+
         [Column("supplier_id")]
         public int SupplierId { get; set; }
         public Suppliers Supplier { get; set; }
+
         [Column("category_id")]
         public int CategoryId { get; set; }
         public Categories Categories { get; set; }
+
+
         [Column("quantity")]
         public int Quantity { get; set; }
         [Column("unit_ptice")]
@@ -35,5 +40,6 @@ namespace POS.Repository
         public int ReorderLevel { get; set; }
         [Column("discontinued")]
         public bool Discontinued { get; set; }
+        public ICollection<OrderDetails> OrderDetail { get; set; }
     }
 }
