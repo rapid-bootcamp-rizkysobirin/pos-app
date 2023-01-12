@@ -18,19 +18,19 @@ namespace POS.Repository
         public string ProductName { get; set; }
 
 
-        [Column("supplier_id")]
-        public int SupplierId { get; set; }
+/*        [Column("supplier_id")]
+        public int SupplierId { get; set; }*/
         public SuppliersEntity Supplier { get; set; }
 
-        [Column("category_id")]
-        public int CategoryId { get; set; }
+/*        [Column("category_id")]
+        public int CategoryId { get; set; }*/
         public CategoriesEntity Category { get; set; }
 
 
         [Column("quantity")]
         public int Quantity { get; set; }
-        [Column("unit_ptice")]
-        public double UnitPrice { get; set; }
+        [Column("unit_price")]
+        public int UnitPrice { get; set; }
         [Column("unit_in_stock")]
         public int UnitInStock { get; set; }
         [Column("unit_in_order")]

@@ -31,7 +31,7 @@ namespace POS.Web.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Save([Bind("Name, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax")] CustomersEntity request)
+        public IActionResult Save([Bind("CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax")] CustomersEntity request)
         {
             _service.Add(request);
             return Redirect("Index");
@@ -51,7 +51,7 @@ namespace POS.Web.Controllers
             return View(customer);
         }
         [HttpPost]
-        public IActionResult Update([Bind("Id, Name, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax")] CustomersEntity customer)
+        public IActionResult Update([Bind("Id, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax")] CustomersEntity customer)
         {
             _service.Update(customer);
             return Redirect("Index");

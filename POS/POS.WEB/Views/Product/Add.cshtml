@@ -43,8 +43,12 @@
         <input asp-for="ReorderLevel" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="Discontinued">Discontinued</label>
-        <input asp-for="Discontinued" class="form-control" />
+@*        <label asp-for="Discontinued">Discontinued</label>
+        <input asp-for="Discontinued" class="form-control" />*@
+
+        <input asp-for="Discontinued" type="checkbox">
+        <label asp-for="Discontinued" class="custom-control-label">Discontinued</label>
+
     </div>
     <div class="pt-2 pb-2">
         <button type="submit" class="btn btn-primary">Submit</button>

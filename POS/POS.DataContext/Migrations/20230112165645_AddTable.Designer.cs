@@ -12,8 +12,8 @@ using POS.Repository;
 namespace POS.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20230112152622_addTables")]
-    partial class addTables
+    [Migration("20230112165645_AddTable")]
+    partial class AddTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -326,8 +326,7 @@ namespace POS.Repository.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CategoryId")
-                        .HasColumnType("int")
-                        .HasColumnName("category_id");
+                        .HasColumnType("int");
 
                     b.Property<bool>("Discontinued")
                         .HasColumnType("bit")
@@ -347,8 +346,7 @@ namespace POS.Repository.Migrations
                         .HasColumnName("reorder_level");
 
                     b.Property<int>("SupplierId")
-                        .HasColumnType("int")
-                        .HasColumnName("supplier_id");
+                        .HasColumnType("int");
 
                     b.Property<int>("UnitInOrder")
                         .HasColumnType("int")
@@ -358,9 +356,9 @@ namespace POS.Repository.Migrations
                         .HasColumnType("int")
                         .HasColumnName("unit_in_stock");
 
-                    b.Property<double>("UnitPrice")
-                        .HasColumnType("float")
-                        .HasColumnName("unit_ptice");
+                    b.Property<int>("UnitPrice")
+                        .HasColumnType("int")
+                        .HasColumnName("unit_price");
 
                     b.HasKey("Id");
 

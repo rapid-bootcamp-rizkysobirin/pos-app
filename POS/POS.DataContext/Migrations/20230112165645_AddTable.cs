@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace POS.Repository.Migrations
 {
-    public partial class addTables : Migration
+    public partial class AddTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -141,10 +141,10 @@ namespace POS.Repository.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     product_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    supplier_id = table.Column<int>(type: "int", nullable: false),
-                    category_id = table.Column<int>(type: "int", nullable: false),
+                    SupplierId = table.Column<int>(type: "int", nullable: false),
+                    CategoryId = table.Column<int>(type: "int", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false),
-                    unit_ptice = table.Column<double>(type: "float", nullable: false),
+                    unit_price = table.Column<int>(type: "int", nullable: false),
                     unit_in_stock = table.Column<int>(type: "int", nullable: false),
                     unit_in_order = table.Column<int>(type: "int", nullable: false),
                     reorder_level = table.Column<int>(type: "int", nullable: false),
@@ -154,14 +154,14 @@ namespace POS.Repository.Migrations
                 {
                     table.PrimaryKey("PK_tbl_product", x => x.id);
                     table.ForeignKey(
-                        name: "FK_tbl_product_tbl_categorie_category_id",
-                        column: x => x.category_id,
+                        name: "FK_tbl_product_tbl_categorie_CategoryId",
+                        column: x => x.CategoryId,
                         principalTable: "tbl_categorie",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_tbl_product_tbl_supplier_supplier_id",
-                        column: x => x.supplier_id,
+                        name: "FK_tbl_product_tbl_supplier_SupplierId",
+                        column: x => x.SupplierId,
                         principalTable: "tbl_supplier",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
@@ -217,14 +217,14 @@ namespace POS.Repository.Migrations
                 column: "ProductsId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_tbl_product_category_id",
+                name: "IX_tbl_product_CategoryId",
                 table: "tbl_product",
-                column: "category_id");
+                column: "CategoryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_tbl_product_supplier_id",
+                name: "IX_tbl_product_SupplierId",
                 table: "tbl_product",
-                column: "supplier_id");
+                column: "SupplierId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

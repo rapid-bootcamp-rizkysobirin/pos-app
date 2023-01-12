@@ -31,7 +31,7 @@ namespace POS.Web.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Save([Bind("ProductName, Supplier, Category, QuantityPerUnit, UnitPrice, UnitInStock, UnitOnOrder, ReorderLevel, Discontinued")] ProductsEntity request)
+        public IActionResult Save([Bind("ProductName, Supplier, Category, Quantity, UnitPrice, UnitInStock, UnitInOrder, ReorderLevel, Discontinued")] ProductsEntity request)
         {
             _service.Add(request);
             return Redirect("Index");
@@ -51,7 +51,7 @@ namespace POS.Web.Controllers
             return View(product);
         }
         [HttpPost]
-        public IActionResult Update([Bind("Id, ProductName, Supplier, Category, QuantityPerUnit, UnitPrice, UnitInStock, UnitOnOrder, ReorderLevel, Discontinued")] ProductsEntity product)
+        public IActionResult Update([Bind("Id, ProductName, Supplier, Category, Quantity, UnitPrice, UnitInStock, UnitInOrder, ReorderLevel, Discontinued")] ProductsEntity product)
         {
             _service.Update(product);
             return Redirect("Index");

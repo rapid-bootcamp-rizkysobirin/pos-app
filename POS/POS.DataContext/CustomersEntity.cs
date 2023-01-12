@@ -29,7 +29,7 @@ namespace POS.Repository
         public string Region { get; set; }
         [Column("postal_code")]
         public string PostalCode { get; set; }
-        [Column("country")]
+        [Column("country")] 
         public string Country { get; set; }
         [Column("phone")]
         public string Phone { get; set; }
