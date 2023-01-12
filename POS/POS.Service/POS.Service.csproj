@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\POS.DataContext\POS.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

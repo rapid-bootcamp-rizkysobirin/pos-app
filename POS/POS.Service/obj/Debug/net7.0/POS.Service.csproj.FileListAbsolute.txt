@@ -12,3 +12,20 @@ D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\refint\P
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.pdb
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.genruntimeconfig.cache
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\ref\POS.Service.dll
+E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.deps.json
+E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.runtimeconfig.json
+E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.dll
+E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.pdb
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.AssemblyReference.cache
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.GeneratedMSBuildEditorConfig.editorconfig
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.AssemblyInfoInputs.cache
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.AssemblyInfo.cs
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.CoreCompileInputs.cache
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.dll
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\refint\POS.Service.dll
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.pdb
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.genruntimeconfig.cache
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\ref\POS.Service.dll
+E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.dll
+E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.pdb
+E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.CopyComplete

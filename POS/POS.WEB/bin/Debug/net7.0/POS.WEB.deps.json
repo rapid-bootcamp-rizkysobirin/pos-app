@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "POS.WEB/1.0.0": {
+      "POS.Web/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13",
@@ -15,7 +15,7 @@
           "POS.Service": "1.0.0"
         },
         "runtime": {
-          "POS.WEB.dll": {}
+          "POS.Web.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -441,7 +441,8 @@
       "POS.Service/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.13",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13",
+          "POS.Repository": "1.0.0"
         },
         "runtime": {
           "POS.Service.dll": {}
@@ -450,7 +451,7 @@
     }
   },
   "libraries": {
-    "POS.WEB/1.0.0": {
+    "POS.Web/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

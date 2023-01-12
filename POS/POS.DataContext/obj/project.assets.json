@@ -2013,19 +2013,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\natadekoko\\.nuget\\packages\\": {}
+    "C:\\Users\\Rin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj",
+      "projectUniqueName": "E:\\belajar\\.Net\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj",
       "projectName": "POS.Repository",
-      "projectPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj",
-      "packagesPath": "C:\\Users\\natadekoko\\.nuget\\packages\\",
-      "outputPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.DataContext\\obj\\",
+      "projectPath": "E:\\belajar\\.Net\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj",
+      "packagesPath": "C:\\Users\\Rin\\.nuget\\packages\\",
+      "outputPath": "E:\\belajar\\.Net\\pos-app\\POS\\POS.DataContext\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\natadekoko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

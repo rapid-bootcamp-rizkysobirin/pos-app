@@ -12,3 +12,17 @@ D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.DataContext\obj\Debug\net7.0\refi
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.pdb
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.genruntimeconfig.cache
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.DataContext\obj\Debug\net7.0\ref\POS.Repository.dll
+E:\belajar\.Net\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.Repository.deps.json
+E:\belajar\.Net\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.Repository.runtimeconfig.json
+E:\belajar\.Net\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.Repository.dll
+E:\belajar\.Net\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.Repository.pdb
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.csproj.AssemblyReference.cache
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.GeneratedMSBuildEditorConfig.editorconfig
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.AssemblyInfoInputs.cache
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.AssemblyInfo.cs
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.csproj.CoreCompileInputs.cache
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.dll
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\refint\POS.Repository.dll
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.pdb
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.genruntimeconfig.cache
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\ref\POS.Repository.dll

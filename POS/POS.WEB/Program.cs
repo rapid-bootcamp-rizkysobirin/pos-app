@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using POS.Repository;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("SQLServerConnection");
-builder.Services.AddDbContext<POS.Repository.PosAppContext>(
+builder.Services.AddDbContext<POS.Repository.ApplicationDBContext>(
     options => options.UseSqlServer(connectionString)
 );
 
