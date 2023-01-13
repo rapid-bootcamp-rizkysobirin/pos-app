@@ -136,3 +136,5 @@ E:\belajar\.Net\pos-app\POS\POS.WEB\obj\Debug\net7.0\scopedcss\projectbundle\POS
 E:\belajar\.Net\pos-app\POS\POS.WEB\obj\Debug\net7.0\POS.Web.csproj.CopyComplete
 E:\belajar\.Net\pos-app\POS\POS.WEB\obj\Debug\net7.0\POS.Web.genruntimeconfig.cache
 E:\belajar\.Net\pos-app\POS\POS.WEB\obj\Debug\net7.0\ref\POS.Web.dll
+E:\belajar\.Net\pos-app\POS\POS.WEB\bin\Debug\net7.0\POS.ViewModel.dll
+E:\belajar\.Net\pos-app\POS\POS.WEB\bin\Debug\net7.0\POS.ViewModel.pdb

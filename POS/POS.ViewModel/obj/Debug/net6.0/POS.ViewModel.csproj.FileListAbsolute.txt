@@ -1,0 +1,12 @@
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\bin\Debug\net6.0\POS.ViewModel.deps.json
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\bin\Debug\net6.0\POS.ViewModel.dll
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\bin\Debug\net6.0\POS.ViewModel.pdb
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\obj\Debug\net6.0\POS.ViewModel.csproj.AssemblyReference.cache
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\obj\Debug\net6.0\POS.ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\obj\Debug\net6.0\POS.ViewModel.AssemblyInfoInputs.cache
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\obj\Debug\net6.0\POS.ViewModel.AssemblyInfo.cs
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\obj\Debug\net6.0\POS.ViewModel.csproj.CoreCompileInputs.cache
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\obj\Debug\net6.0\POS.ViewModel.dll
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\obj\Debug\net6.0\refint\POS.ViewModel.dll
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\obj\Debug\net6.0\POS.ViewModel.pdb
+E:\belajar\.Net\pos-app\POS\POS.ViewModel\obj\Debug\net6.0\ref\POS.ViewModel.dll

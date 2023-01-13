@@ -26,3 +26,6 @@ E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\refint\POS.Reposito
 E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.pdb
 E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.genruntimeconfig.cache
 E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\ref\POS.Repository.dll
+E:\belajar\.Net\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.ViewModel.dll
+E:\belajar\.Net\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.ViewModel.pdb
+E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.csproj.CopyComplete

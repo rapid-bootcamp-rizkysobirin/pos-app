@@ -38,5 +38,25 @@ namespace POS.Repository
         public string HomePage { get; set; }
 
         public ICollection<ProductsEntity> productsEntities { get; set; }
+
+        public SuppliersEntity(POS.ViewModel.SupplierModel model)
+        {
+            CompanyName = model.CompanyName;
+            ContactName = model.ContactName;
+            ContactTitle = model.ContactTitle;
+            Address = model.Address;
+            City = model.City;
+            Region = model.Region;
+            PostalCode = model.PostalCode;
+            Country = model.Country;
+            Phone = model.Phone;
+            Fax = model.Fax;
+            HomePage = model.HomePage;
+        }
+
+        public SuppliersEntity()
+        {
+
+        }
     }
 }

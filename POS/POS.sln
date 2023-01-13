@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POS.Repository", "POS.DataC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POS.Service", "POS.Service\POS.Service.csproj", "{C4FB1795-F477-4723-876B-84B6EEBA1983}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.ViewModel", "POS.ViewModel\POS.ViewModel.csproj", "{C82802D6-D4E2-4DFC-925B-938DAB300C44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C4FB1795-F477-4723-876B-84B6EEBA1983}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4FB1795-F477-4723-876B-84B6EEBA1983}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4FB1795-F477-4723-876B-84B6EEBA1983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82802D6-D4E2-4DFC-925B-938DAB300C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82802D6-D4E2-4DFC-925B-938DAB300C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82802D6-D4E2-4DFC-925B-938DAB300C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82802D6-D4E2-4DFC-925B-938DAB300C44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -782,6 +782,16 @@
             "rid": "win"
           }
         }
+      },
+      "POS.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/POS.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POS.ViewModel.dll": {}
+        }
       }
     }
   },
@@ -2003,13 +2013,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "POS.ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../POS.ViewModel/POS.ViewModel.csproj",
+      "msbuildProject": "../POS.ViewModel/POS.ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.13",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.13"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.13",
+      "POS.ViewModel >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2038,7 +2054,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\belajar\\.Net\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj": {
+              "projectPath": "E:\\belajar\\.Net\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

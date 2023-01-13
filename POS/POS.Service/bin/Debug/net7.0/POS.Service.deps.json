@@ -487,10 +487,16 @@
       "POS.Repository/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.13",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13",
+          "POS.ViewModel": "1.0.0"
         },
         "runtime": {
           "POS.Repository.dll": {}
+        }
+      },
+      "POS.ViewModel/1.0.0": {
+        "runtime": {
+          "POS.ViewModel.dll": {}
         }
       }
     }
@@ -803,6 +809,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "POS.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "POS.ViewModel/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
