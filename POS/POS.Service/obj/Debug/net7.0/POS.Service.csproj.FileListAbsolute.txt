@@ -12,3 +12,6 @@ D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\refint\P
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.pdb
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.genruntimeconfig.cache
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\ref\POS.Service.dll
+D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.dll
+D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.pdb
+D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.CopyComplete

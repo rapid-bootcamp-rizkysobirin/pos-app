@@ -1,4 +1,4 @@
-﻿using POS.DataContext;
+﻿using POS.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -19,7 +19,7 @@ namespace POS.Repository
         public string ProductName { get; set; }
 
 
-        [Column("supplier_id")]
+        [Column("supplier_id")] 
         public int SupplierId { get; set; }
         public Suppliers Supplier { get; set; }
 

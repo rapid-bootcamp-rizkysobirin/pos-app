@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POS.DataContext
+namespace POS.Repository
 {
     [Table("tbl_categories")]
     public class Categories
@@ -20,7 +20,7 @@ namespace POS.DataContext
         [Column("description")]
         public string Description { get; set; }
 
-        public ICollection<Products> Product { get; set; }
+        public ICollection<Products> Products { get; set; }
 
     }
 }

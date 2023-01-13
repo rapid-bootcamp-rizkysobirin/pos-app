@@ -782,6 +782,20 @@
             "rid": "win"
           }
         }
+      },
+      "POS.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.13",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13"
+        },
+        "compile": {
+          "bin/placeholder/POS.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POS.Repository.dll": {}
+        }
       }
     }
   },
@@ -2003,13 +2017,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "POS.Repository/1.0.0": {
+      "type": "project",
+      "path": "../POS.DataContext/POS.Repository.csproj",
+      "msbuildProject": "../POS.DataContext/POS.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.13",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.13"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.13",
+      "POS.Repository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2038,7 +2058,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj": {
+              "projectPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
