@@ -5,12 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using POS.Repository;
+using POS.ViewModel;
 
 namespace POS.Service
 {
     public class CategoryService
     {
         private readonly ApplicationDBContext _context;
+        /*==tambahan*/
+        private CategoryModel EntityToModel(CategoriesEntity entity)
+        {
+            CategoryModel result = new CategoryModel();
+            result.Id= entity.Id;
+            result.CategoryName = entity.CategoryName;
+            result.Description= entity.Description;
+
+            return result;
+        }
+        /*==========*/
+
+
         public CategoryService(ApplicationDBContext context)
         {
             _context = context;
@@ -21,10 +35,12 @@ namespace POS.Service
             return _context.categoryEntities.ToList();
         }
 
-        public CategoriesEntity View(int? id)
+        /*public CategoriesEntity View(int? id)*/
+        public CategoryModel View(int? id)
         {
             var category = _context.categoryEntities.Find(id);
-            return category;
+            /*return category;*/ //kalo pake model
+            return EntityToModel(category);
         }
 
         public void Add(CategoriesEntity category)
