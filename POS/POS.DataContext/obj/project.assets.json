@@ -782,6 +782,16 @@
             "rid": "win"
           }
         }
+      },
+      "POS.ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/POS.ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POS.ViewModel.dll": {}
+        }
       }
     }
   },
@@ -2003,29 +2013,35 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "POS.ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../POS.ViewModel/POS.ViewModel.csproj",
+      "msbuildProject": "../POS.ViewModel/POS.ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.13",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.13"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.13",
+      "POS.ViewModel >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\natadekoko\\.nuget\\packages\\": {}
+    "C:\\Users\\Rin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj",
+      "projectUniqueName": "E:\\belajar\\.Net\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj",
       "projectName": "POS.Repository",
-      "projectPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj",
-      "packagesPath": "C:\\Users\\natadekoko\\.nuget\\packages\\",
-      "outputPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.DataContext\\obj\\",
+      "projectPath": "E:\\belajar\\.Net\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj",
+      "packagesPath": "C:\\Users\\Rin\\.nuget\\packages\\",
+      "outputPath": "E:\\belajar\\.Net\\pos-app\\POS\\POS.DataContext\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\natadekoko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2038,7 +2054,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\belajar\\.Net\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj": {
+              "projectPath": "E:\\belajar\\.Net\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

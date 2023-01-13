@@ -487,11 +487,24 @@
       "POS.Repository/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.13",
+<<<<<<< HEAD
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13"
+=======
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13",
+          "POS.ViewModel": "1.0.0"
+>>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122
         },
         "runtime": {
           "POS.Repository.dll": {}
         }
+<<<<<<< HEAD
+=======
+      },
+      "POS.ViewModel/1.0.0": {
+        "runtime": {
+          "POS.ViewModel.dll": {}
+        }
+>>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122
       }
     }
   },
@@ -806,6 +819,14 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+<<<<<<< HEAD
+=======
+    },
+    "POS.ViewModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+>>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122
     }
   }
 }

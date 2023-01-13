@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.WEB", "POS.WEB\POS.WEB.csproj", "{06C5C356-F0BC-4480-BB6B-6A2B42C70CED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POS.Web", "POS.WEB\POS.Web.csproj", "{06C5C356-F0BC-4480-BB6B-6A2B42C70CED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.Repository", "POS.DataContext\POS.Repository.csproj", "{00517D35-4577-4A32-BA2E-13B9D04A4385}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POS.Repository", "POS.DataContext\POS.Repository.csproj", "{00517D35-4577-4A32-BA2E-13B9D04A4385}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.Service", "POS.Service\POS.Service.csproj", "{C4FB1795-F477-4723-876B-84B6EEBA1983}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POS.Service", "POS.Service\POS.Service.csproj", "{C4FB1795-F477-4723-876B-84B6EEBA1983}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.ViewModel", "POS.ViewModel\POS.ViewModel.csproj", "{C82802D6-D4E2-4DFC-925B-938DAB300C44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C4FB1795-F477-4723-876B-84B6EEBA1983}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4FB1795-F477-4723-876B-84B6EEBA1983}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4FB1795-F477-4723-876B-84B6EEBA1983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82802D6-D4E2-4DFC-925B-938DAB300C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82802D6-D4E2-4DFC-925B-938DAB300C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82802D6-D4E2-4DFC-925B-938DAB300C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82802D6-D4E2-4DFC-925B-938DAB300C44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

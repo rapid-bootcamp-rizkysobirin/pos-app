@@ -6,21 +6,33 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using POS.ViewModel;
 
 namespace POS.Repository
 {
-    [Table("tbl_categories")]
-    public class Categories
+    [Table("tbl_categorie")]
+    public class CategoriesEntity
     {
         [Key]
         [Column("id")]
         public int Id { get; set; }
+        [Required]
         [Column("category_name")]
         public string CategoryName { get; set; }
+        [Required]
         [Column("description")]
         public string Description { get; set; }
 
-        public ICollection<Products> Products { get; set; }
+        public ICollection<ProductsEntity> productsEntities { get; set; }
 
+        public CategoriesEntity(POS.ViewModel.CategoryModel model)
+        {
+            CategoryName = model.CategoryName;
+            Description = model.Description;
+        }
+        public CategoriesEntity()
+        {
+
+        }
     }
 }
