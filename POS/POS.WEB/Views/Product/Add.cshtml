@@ -1,7 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model POS.Repository.ProductsEntity
+@model POS.ViewModel.ProductModel
 
 @{
     ViewData["Title"] = "New Product";
@@ -13,34 +13,56 @@
     <div class="form-group">
         <label asp-for="ProductName">Product Name</label>
         <input asp-for="ProductName" class="form-control" />
+        <span asp-validation-for="ProductName" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Supplier">Supplier</label>
-        <input asp-for="Supplier" class="form-control" />
+        <label asp-for="SupplierId">Supplier ID</label>
+        <select asp-for="SupplierId" class="form-control">
+            <option selected>Select the Supplier</option>
+            <option value=1>Supplier 1</option>
+            <option value=2>Supplier 2</option>
+            <option value=3>Supplier 3</option>
+            <option value=4>Supplier 4</option>
+            <option value=5>Supplier 5</option>
+        </select>
+        <span asp-validation-for="SupplierId" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Category">Category</label>
-        <input asp-for="Category" class="form-control" />
+        <label asp-for="CategoryId">Category ID</label>
+        <select asp-for="CategoryId" class="form-control">
+            <option selected>Select the Category</option>
+            <option value=1>Category 1</option>
+            <option value=2>Category 2</option>
+            <option value=3>Category 3</option>
+            <option value=4>Category 4</option>
+            <option value=5>Category 5</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Quantity">Quantity Per Unit</label>
+        <label asp-for="Quantity">Quantity</label>
         <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="UnitPrice">Unit Price</label>
         <input asp-for="UnitPrice" class="form-control" />
+        <span asp-validation-for="UnitPrice" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="UnitInStock">Unit In Stock</label>
         <input asp-for="UnitInStock" class="form-control" />
+        <span asp-validation-for="UnitInStock" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="UnitInOrder">Unit On Order</label>
+        <label asp-for="UnitInOrder">Unit In Order</label>
         <input asp-for="UnitInOrder" class="form-control" />
+        <span asp-validation-for="UnitInOrder" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="ReorderLevel">Reorder Level</label>
         <input asp-for="ReorderLevel" class="form-control" />
+        <span asp-validation-for="ReorderLevel" class="text-danger"></span>
     </div>
     <div class="form-group">
 @*        <label asp-for="Discontinued">Discontinued</label>

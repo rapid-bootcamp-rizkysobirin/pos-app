@@ -1,13 +1,13 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model IEnumerable<POS.Repository.ProductsEntity>
+@model IEnumerable<POS.ViewModel.Response.ProductResponse>
 @{
     ViewBag.Title = "Product";
     Layout = "_Layout";
 }
 <h2>Product</h2>
-<a asp-action="Add" class="btn btn-primary" role="button">Add Product</a>
+<a asp-action="Add" class="btn btn-primary" role="button"id="btn-add">Add Product</a>
 <table class="table table-responsive">
     <thead>
         <tr>
@@ -15,7 +15,7 @@
             <th>Product Name</th>
             <th>Supplier</th>
             <th>Category</th>
-            <th>Quantity Per Unit</th>
+            <th>Quantity</th>
             <th>Unit Price</th>
             <th>Unit In Stock</th>
             <th>Unit In Order</th>
@@ -30,8 +30,8 @@
             <tr>
                 <td>@item.Id</td>
                 <td>@item.ProductName</td>
-                <td>@item.Supplier</td>
-                <td>@item.Category</td>
+                <td>@item.CompanyName</td>
+                <td>@item.CategoryName</td>
                 <td>@item.Quantity</td>
                 <td>@item.UnitPrice</td>
                 <td>@item.UnitInStock</td>
@@ -47,3 +47,36 @@
         }
     </tbody>
 </table>
+
+<div id="my-modal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script type="text/javascript">
+        $("#btn-add").on("click", function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: "/Product/AddModal",
+                type: "GET",
+                dataType: "html",
+                success: function (data) {
+                    $("#my-modal").find(".modal-body").html(data);
+                    $("#my-modal").modal("show");
+                }
+            });
+        });
+    </script>
+}

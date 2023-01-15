@@ -4,19 +4,18 @@
 @model POS.ViewModel.ProductModel
 
 @{
-    ViewData["Title"] = "Product Edit";
+    ViewData["Title"] = "New Product";
 }
 
-<h2>Edit Product</h2>
-<form asp-controller="Category" asp-action="Update" method="post">
-    <input type="hidden" asp-for="Id" />
+
+<form asp-controller="Product" asp-action="Save" method="post">
     <div class="form-group">
         <label asp-for="ProductName">Product Name</label>
         <input asp-for="ProductName" class="form-control" />
         <span asp-validation-for="ProductName" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="SupplierId">Supplier Id</label>
+        <label asp-for="SupplierId">Supplier ID</label>
         <select asp-for="SupplierId" class="form-control">
             <option selected>Select the Supplier</option>
             <option value=1>Supplier 1</option>
@@ -28,7 +27,7 @@
         <span asp-validation-for="SupplierId" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="CategoryId">Category Id</label>
+        <label asp-for="CategoryId">Category ID</label>
         <select asp-for="CategoryId" class="form-control">
             <option selected>Select the Category</option>
             <option value=1>Category 1</option>
@@ -64,9 +63,15 @@
         <input asp-for="ReorderLevel" class="form-control" />
         <span asp-validation-for="ReorderLevel" class="text-danger"></span>
     </div>
+    <div class="form-group">
+@*        <label asp-for="Discontinued">Discontinued</label>
+        <input asp-for="Discontinued" class="form-control" />*@
 
-    <div class="pt-2 pb-2">
-        <button type="submit" class="btn btn-sm btn-primary">Update</button>
+        <input asp-for="Discontinued" type="checkbox">
+        <label asp-for="Discontinued" class="custom-control-label">Discontinued</label>
+
     </div>
-
+    <div class="pt-2 pb-2">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
 </form>

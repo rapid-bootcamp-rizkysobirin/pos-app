@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using POS.Repository;
+using POS.S;
 using POS.Service;
+using POS.ViewModel;
 
 namespace POS.Web.Controllers
 {
@@ -21,7 +23,8 @@ namespace POS.Web.Controllers
         [HttpGet]
         public IActionResult Details(int? id)
         {
-            var product = _service.View(id);
+            /*        var product = _service.View(id);*/
+            var product = _service.ViewProductResponse(id);
             return View(product);
         }
 
@@ -30,11 +33,23 @@ namespace POS.Web.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Save([Bind("ProductName, Supplier, Category, Quantity, UnitPrice, UnitInStock, UnitInOrder, ReorderLevel, Discontinued")] ProductsEntity request)
+
+        [HttpGet]
+        public IActionResult AddModal()
         {
-            _service.Add(request);
-            return Redirect("Index");
+            return PartialView("_Add");
+        }
+
+        [HttpPost]
+        public IActionResult Save(
+            [Bind("ProductName, SupplierId, CategoryId, Quantity, UnitPrice, UnitInStock, UnitInOrder, ReorderLevel, Discontinued")] ProductModel request)
+        {
+            if (ModelState.IsValid)
+            {
+                _service.Add(new ProductsEntity(request));
+                return Redirect("Index");
+            }
+            return View("Add", request);
         }
 
         [HttpGet]
@@ -47,15 +62,20 @@ namespace POS.Web.Controllers
         [HttpGet]
         public IActionResult Edit(int? id)
         {
+            /*var product = _service.View(id);*/
             var product = _service.View(id);
             return View(product);
         }
         [HttpPost]
-        public IActionResult Update([Bind("Id, ProductName, Supplier, Category, Quantity, UnitPrice, UnitInStock, UnitInOrder, ReorderLevel, Discontinued")] ProductsEntity product)
+        public IActionResult Update(
+            [Bind("Id, ProductName, SupplierId, CategoryId, Quantity, UnitPrice, UnitInStock, UnitInOrder, ReorderLevel, Discontinued")] ProductModel request)
         {
-            _service.Update(product);
-            return Redirect("Index");
+            if (ModelState.IsValid)
+            {
+                _service.Update(request);
+                return Redirect("Index");
+            }
+            return View("Edit", request);
         }
-
     }
 }
