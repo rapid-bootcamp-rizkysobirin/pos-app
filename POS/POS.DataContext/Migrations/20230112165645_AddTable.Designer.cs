@@ -9,11 +9,11 @@ using POS.Repository;
 
 #nullable disable
 
-namespace POS.WEB.Migrations
+namespace POS.Repository.Migrations
 {
-    [DbContext(typeof(PosAppContext))]
-    [Migration("20230111235046_addTables")]
-    partial class addTables
+    [DbContext(typeof(ApplicationDBContext))]
+    [Migration("20230112165645_AddTable")]
+    partial class AddTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace POS.WEB.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("POS.Repository.Categories", b =>
+            modelBuilder.Entity("POS.Repository.CategoriesEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,10 +45,10 @@ namespace POS.WEB.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tbl_categories");
+                    b.ToTable("tbl_categorie");
                 });
 
-            modelBuilder.Entity("POS.Repository.Customers", b =>
+            modelBuilder.Entity("POS.Repository.CustomersEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -109,10 +109,10 @@ namespace POS.WEB.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tbl_customers");
+                    b.ToTable("tbl_customer");
                 });
 
-            modelBuilder.Entity("POS.Repository.Employees", b =>
+            modelBuilder.Entity("POS.Repository.EmployeesEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -195,10 +195,10 @@ namespace POS.WEB.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tbl_employees");
+                    b.ToTable("tbl_employee");
                 });
 
-            modelBuilder.Entity("POS.Repository.OrderDetails", b =>
+            modelBuilder.Entity("POS.Repository.OrderDetailsEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -214,7 +214,7 @@ namespace POS.WEB.Migrations
                     b.Property<int>("OrdersId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductId")
+                    b.Property<int>("ProductsId")
                         .HasColumnType("int");
 
                     b.Property<long>("Quantity")
@@ -229,12 +229,12 @@ namespace POS.WEB.Migrations
 
                     b.HasIndex("OrdersId");
 
-                    b.HasIndex("ProductId");
+                    b.HasIndex("ProductsId");
 
-                    b.ToTable("tbl_order_details");
+                    b.ToTable("tbl_order_detail");
                 });
 
-            modelBuilder.Entity("POS.Repository.Orders", b =>
+            modelBuilder.Entity("POS.Repository.OrdersEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -247,9 +247,15 @@ namespace POS.WEB.Migrations
                         .HasColumnType("int")
                         .HasColumnName("customer_id");
 
+                    b.Property<int>("CustomersId")
+                        .HasColumnType("int");
+
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int")
                         .HasColumnName("employee_id");
+
+                    b.Property<int>("EmployeesId")
+                        .HasColumnType("int");
 
                     b.Property<int>("Freight")
                         .HasColumnType("int")
@@ -258,9 +264,6 @@ namespace POS.WEB.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("order_date");
-
-                    b.Property<int?>("OrdersId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("RequiredDate")
                         .HasColumnType("datetime2")
@@ -276,6 +279,25 @@ namespace POS.WEB.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("ship_city");
 
+                    b.Property<string>("ShipCountry")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("ship_country");
+
+                    b.Property<string>("ShipPostalCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("ship_postal_code");
+
+                    b.Property<string>("ShipRegion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("ship_region");
+
+                    b.Property<int>("ShipVia")
+                        .HasColumnType("int")
+                        .HasColumnName("ship_via");
+
                     b.Property<string>("Shipname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
@@ -287,16 +309,14 @@ namespace POS.WEB.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomerId");
+                    b.HasIndex("CustomersId");
 
-                    b.HasIndex("EmployeeId");
+                    b.HasIndex("EmployeesId");
 
-                    b.HasIndex("OrdersId");
-
-                    b.ToTable("tbl_orders");
+                    b.ToTable("tbl_order");
                 });
 
-            modelBuilder.Entity("POS.Repository.Products", b =>
+            modelBuilder.Entity("POS.Repository.ProductsEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -305,12 +325,8 @@ namespace POS.WEB.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CategoriesId")
-                        .HasColumnType("int");
-
                     b.Property<int>("CategoryId")
-                        .HasColumnType("int")
-                        .HasColumnName("category_id");
+                        .HasColumnType("int");
 
                     b.Property<bool>("Discontinued")
                         .HasColumnType("bit")
@@ -330,31 +346,30 @@ namespace POS.WEB.Migrations
                         .HasColumnName("reorder_level");
 
                     b.Property<int>("SupplierId")
-                        .HasColumnType("int")
-                        .HasColumnName("supplier_id");
+                        .HasColumnType("int");
 
                     b.Property<int>("UnitInOrder")
                         .HasColumnType("int")
-                        .HasColumnName("uni_in_order");
+                        .HasColumnName("unit_in_order");
 
                     b.Property<int>("UnitInStock")
                         .HasColumnType("int")
-                        .HasColumnName("uni_in_stock");
+                        .HasColumnName("unit_in_stock");
 
-                    b.Property<double>("UnitPrice")
-                        .HasColumnType("float")
-                        .HasColumnName("unit_ptice");
+                    b.Property<int>("UnitPrice")
+                        .HasColumnType("int")
+                        .HasColumnName("unit_price");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoriesId");
+                    b.HasIndex("CategoryId");
 
                     b.HasIndex("SupplierId");
 
-                    b.ToTable("tbl_products");
+                    b.ToTable("tbl_product");
                 });
 
-            modelBuilder.Entity("POS.Repository.Suppliers", b =>
+            modelBuilder.Entity("POS.Repository.SuppliersEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -420,98 +435,94 @@ namespace POS.WEB.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tbl_suppliers");
+                    b.ToTable("tbl_supplier");
                 });
 
-            modelBuilder.Entity("POS.Repository.OrderDetails", b =>
+            modelBuilder.Entity("POS.Repository.OrderDetailsEntity", b =>
                 {
-                    b.HasOne("POS.Repository.Orders", "Orders")
-                        .WithMany()
+                    b.HasOne("POS.Repository.OrdersEntity", "Orders")
+                        .WithMany("orderDetailsEntities")
                         .HasForeignKey("OrdersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.Products", "Product")
-                        .WithMany("OrderDetail")
-                        .HasForeignKey("ProductId")
+                    b.HasOne("POS.Repository.ProductsEntity", "Products")
+                        .WithMany("orderDetailsEntities")
+                        .HasForeignKey("ProductsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Orders");
 
-                    b.Navigation("Product");
+                    b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("POS.Repository.Orders", b =>
+            modelBuilder.Entity("POS.Repository.OrdersEntity", b =>
                 {
-                    b.HasOne("POS.Repository.Customers", "Customer")
-                        .WithMany("Order")
-                        .HasForeignKey("CustomerId")
+                    b.HasOne("POS.Repository.CustomersEntity", "Customers")
+                        .WithMany("ordersEntities")
+                        .HasForeignKey("CustomersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.Employees", "Employee")
-                        .WithMany("Order")
-                        .HasForeignKey("EmployeeId")
+                    b.HasOne("POS.Repository.EmployeesEntity", "Employees")
+                        .WithMany("ordersEntities")
+                        .HasForeignKey("EmployeesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.Orders", null)
-                        .WithMany("Order")
-                        .HasForeignKey("OrdersId");
+                    b.Navigation("Customers");
 
-                    b.Navigation("Customer");
-
-                    b.Navigation("Employee");
+                    b.Navigation("Employees");
                 });
 
-            modelBuilder.Entity("POS.Repository.Products", b =>
+            modelBuilder.Entity("POS.Repository.ProductsEntity", b =>
                 {
-                    b.HasOne("POS.Repository.Categories", "Categories")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoriesId")
+                    b.HasOne("POS.Repository.CategoriesEntity", "Category")
+                        .WithMany("productsEntities")
+                        .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.Suppliers", "Supplier")
-                        .WithMany("Product")
+                    b.HasOne("POS.Repository.SuppliersEntity", "Supplier")
+                        .WithMany("productsEntities")
                         .HasForeignKey("SupplierId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Categories");
+                    b.Navigation("Category");
 
                     b.Navigation("Supplier");
                 });
 
-            modelBuilder.Entity("POS.Repository.Categories", b =>
+            modelBuilder.Entity("POS.Repository.CategoriesEntity", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("productsEntities");
                 });
 
-            modelBuilder.Entity("POS.Repository.Customers", b =>
+            modelBuilder.Entity("POS.Repository.CustomersEntity", b =>
                 {
-                    b.Navigation("Order");
+                    b.Navigation("ordersEntities");
                 });
 
-            modelBuilder.Entity("POS.Repository.Employees", b =>
+            modelBuilder.Entity("POS.Repository.EmployeesEntity", b =>
                 {
-                    b.Navigation("Order");
+                    b.Navigation("ordersEntities");
                 });
 
-            modelBuilder.Entity("POS.Repository.Orders", b =>
+            modelBuilder.Entity("POS.Repository.OrdersEntity", b =>
                 {
-                    b.Navigation("Order");
+                    b.Navigation("orderDetailsEntities");
                 });
 
-            modelBuilder.Entity("POS.Repository.Products", b =>
+            modelBuilder.Entity("POS.Repository.ProductsEntity", b =>
                 {
-                    b.Navigation("OrderDetail");
+                    b.Navigation("orderDetailsEntities");
                 });
 
-            modelBuilder.Entity("POS.Repository.Suppliers", b =>
+            modelBuilder.Entity("POS.Repository.SuppliersEntity", b =>
                 {
-                    b.Navigation("Product");
+                    b.Navigation("productsEntities");
                 });
 #pragma warning restore 612, 618
         }

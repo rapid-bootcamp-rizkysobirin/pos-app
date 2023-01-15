@@ -22,11 +22,7 @@ namespace POS.Repository.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-<<<<<<< HEAD:POS/POS.WEB/Migrations/PosAppContextModelSnapshot.cs
-            modelBuilder.Entity("POS.Repository.Categories", b =>
-=======
             modelBuilder.Entity("POS.Repository.CategoriesEntity", b =>
->>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122:POS/POS.DataContext/Migrations/ApplicationDBContextModelSnapshot.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -482,15 +478,9 @@ namespace POS.Repository.Migrations
 
             modelBuilder.Entity("POS.Repository.ProductsEntity", b =>
                 {
-<<<<<<< HEAD:POS/POS.WEB/Migrations/PosAppContextModelSnapshot.cs
-                    b.HasOne("POS.Repository.Categories", "Categories")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoriesId")
-=======
                     b.HasOne("POS.Repository.CategoriesEntity", "Category")
                         .WithMany("productsEntities")
                         .HasForeignKey("CategoryId")
->>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122:POS/POS.DataContext/Migrations/ApplicationDBContextModelSnapshot.cs
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -505,15 +495,9 @@ namespace POS.Repository.Migrations
                     b.Navigation("Supplier");
                 });
 
-<<<<<<< HEAD:POS/POS.WEB/Migrations/PosAppContextModelSnapshot.cs
-            modelBuilder.Entity("POS.Repository.Categories", b =>
-                {
-                    b.Navigation("Products");
-=======
             modelBuilder.Entity("POS.Repository.CategoriesEntity", b =>
                 {
                     b.Navigation("productsEntities");
->>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122:POS/POS.DataContext/Migrations/ApplicationDBContextModelSnapshot.cs
                 });
 
             modelBuilder.Entity("POS.Repository.CustomersEntity", b =>

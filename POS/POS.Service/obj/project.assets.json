@@ -788,12 +788,8 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.13",
-<<<<<<< HEAD
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13"
-=======
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13",
           "POS.ViewModel": "1.0.0"
->>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122
         },
         "compile": {
           "bin/placeholder/POS.Repository.dll": {}
@@ -801,8 +797,6 @@
         "runtime": {
           "bin/placeholder/POS.Repository.dll": {}
         }
-<<<<<<< HEAD
-=======
       },
       "POS.ViewModel/1.0.0": {
         "type": "project",
@@ -813,7 +807,6 @@
         "runtime": {
           "bin/placeholder/POS.ViewModel.dll": {}
         }
->>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122
       }
     }
   },
@@ -2040,14 +2033,11 @@
       "type": "project",
       "path": "../POS.DataContext/POS.Repository.csproj",
       "msbuildProject": "../POS.DataContext/POS.Repository.csproj"
-<<<<<<< HEAD
-=======
     },
     "POS.ViewModel/1.0.0": {
       "type": "project",
       "path": "../POS.ViewModel/POS.ViewModel.csproj",
       "msbuildProject": "../POS.ViewModel/POS.ViewModel.csproj"
->>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122
     }
   },
   "projectFileDependencyGroups": {
@@ -2059,19 +2049,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rin\\.nuget\\packages\\": {}
+    "C:\\Users\\natadekoko\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\belajar\\.Net\\pos-app\\POS\\POS.Service\\POS.Service.csproj",
+      "projectUniqueName": "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.Service\\POS.Service.csproj",
       "projectName": "POS.Service",
-      "projectPath": "E:\\belajar\\.Net\\pos-app\\POS\\POS.Service\\POS.Service.csproj",
-      "packagesPath": "C:\\Users\\Rin\\.nuget\\packages\\",
-      "outputPath": "E:\\belajar\\.Net\\pos-app\\POS\\POS.Service\\obj\\",
+      "projectPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.Service\\POS.Service.csproj",
+      "packagesPath": "C:\\Users\\natadekoko\\.nuget\\packages\\",
+      "outputPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\natadekoko\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2085,13 +2075,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj": {
-              "projectPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj"
-=======
-            "E:\\belajar\\.Net\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj": {
-              "projectPath": "E:\\belajar\\.Net\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj"
->>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122
+            "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj": {
+              "projectPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.DataContext\\POS.Repository.csproj"
             }
           }
         }
