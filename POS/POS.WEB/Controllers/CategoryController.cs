@@ -28,9 +28,22 @@ namespace POS.Web.Controllers
         }
 
         [HttpGet]
+        public IActionResult DetailsModal(int? id)
+        {
+            var category = _service.View(id);
+            return PartialView(category);
+        }
+
+        [HttpGet]
         public IActionResult Add()
         {
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult AddModal()
+        {
+            return PartialView("_Add");
         }
         [HttpPost]
         public IActionResult Save([Bind("CategoryName, Description")] CategoryModel request)
@@ -71,9 +84,7 @@ namespace POS.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                CategoriesEntity categoryEntity = new CategoriesEntity(category);
-                categoryEntity.Id = category.Id;
-                _service.Update(categoryEntity);
+                _service.Update(category);
                 return Redirect("index");
             }
             return View("Edit", category);

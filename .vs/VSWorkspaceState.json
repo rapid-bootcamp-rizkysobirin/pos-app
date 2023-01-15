@@ -2,8 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\POS",
-    "\\POS\\POS.DataContext"
+    "\\POS\\POS.DataContext",
+    "\\POS\\POS.WEB",
+    "\\POS\\POS.WEB\\Controllers",
+    "\\POS\\POS.WEB\\Views",
+    "\\POS\\POS.WEB\\Views\\Shared",
+    "\\POS\\POS.WEB\\Views\\Supplier"
   ],
-  "SelectedNode": "\\POS\\POS.DataContext\\ApplicationDBContext.cs",
+  "SelectedNode": "\\POS\\POS.WEB\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

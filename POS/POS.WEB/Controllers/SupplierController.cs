@@ -9,7 +9,7 @@ namespace POS.Web.Controllers
         private readonly SupplierService _service;
         public SupplierController(ApplicationDBContext context)
         {
-            _service= new SupplierService(context);
+            _service = new SupplierService(context);
         }
 
         public IActionResult Index()

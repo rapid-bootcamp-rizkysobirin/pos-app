@@ -43,7 +43,7 @@ namespace POS.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tbl_categorie");
+                    b.ToTable("tbl_category");
                 });
 
             modelBuilder.Entity("POS.Repository.CustomersEntity", b =>
@@ -324,7 +324,8 @@ namespace POS.Repository.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CategoryId")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("category_id");
 
                     b.Property<bool>("Discontinued")
                         .HasColumnType("bit")
@@ -344,7 +345,8 @@ namespace POS.Repository.Migrations
                         .HasColumnName("reorder_level");
 
                     b.Property<int>("SupplierId")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("supplier_id");
 
                     b.Property<int>("UnitInOrder")
                         .HasColumnType("int")

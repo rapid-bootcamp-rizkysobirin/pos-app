@@ -29,3 +29,20 @@ E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\ref\POS.Repository.
 E:\belajar\.Net\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.ViewModel.dll
 E:\belajar\.Net\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.ViewModel.pdb
 E:\belajar\.Net\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.csproj.CopyComplete
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.Repository.deps.json
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.Repository.runtimeconfig.json
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.Repository.dll
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.Repository.pdb
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.ViewModel.dll
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\bin\Debug\net7.0\POS.ViewModel.pdb
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.csproj.AssemblyReference.cache
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.AssemblyInfoInputs.cache
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.AssemblyInfo.cs
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.csproj.CoreCompileInputs.cache
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.csproj.CopyComplete
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.dll
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\refint\POS.Repository.dll
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.pdb
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\POS.Repository.genruntimeconfig.cache
+D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.DataContext\obj\Debug\net7.0\ref\POS.Repository.dll

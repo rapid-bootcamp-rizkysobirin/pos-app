@@ -12,7 +12,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.13",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.13",
           "POS.Repository": "1.0.0",
-          "POS.Service": "1.0.0"
+          "POS.Service": "1.0.0",
+          "POS.ViewModel": "1.0.0"
         },
         "runtime": {
           "POS.Web.dll": {}

@@ -10,7 +10,7 @@ using POS.ViewModel;
 
 namespace POS.Repository
 {
-    [Table("tbl_categorie")]
+    [Table("tbl_category")]
     public class CategoriesEntity
     {
         [Key]
