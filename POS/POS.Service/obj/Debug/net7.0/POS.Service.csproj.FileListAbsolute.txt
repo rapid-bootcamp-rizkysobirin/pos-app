@@ -12,6 +12,11 @@ D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\refint\P
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.pdb
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.genruntimeconfig.cache
 D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\ref\POS.Service.dll
+<<<<<<< HEAD
+D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.dll
+D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.pdb
+D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.CopyComplete
+=======
 E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.deps.json
 E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.runtimeconfig.json
 E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.dll
@@ -31,22 +36,4 @@ E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.pdb
 E:\belajar\.Net\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.CopyComplete
 E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.ViewModel.dll
 E:\belajar\.Net\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.ViewModel.pdb
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.AssemblyReference.cache
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.GeneratedMSBuildEditorConfig.editorconfig
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.AssemblyInfoInputs.cache
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.AssemblyInfo.cs
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.CoreCompileInputs.cache
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.dll
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\refint\POS.Service.dll
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.pdb
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.deps.json
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.runtimeconfig.json
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.dll
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Service.pdb
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.dll
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.ViewModel.dll
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.Repository.pdb
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\bin\Debug\net7.0\POS.ViewModel.pdb
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.csproj.CopyComplete
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\POS.Service.genruntimeconfig.cache
-D:\kontrak kerja\belajar.Net 3\pos-app2\pos-app\POS\POS.Service\obj\Debug\net7.0\ref\POS.Service.dll
+>>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122

@@ -3,17 +3,19 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using POS.Repository;
 
 #nullable disable
 
-namespace POS.Repository.Migrations
+namespace POS.WEB.Migrations
 {
-    [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(PosAppContext))]
+    [Migration("20230111235046_addTables")]
+    partial class addTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,11 +24,7 @@ namespace POS.Repository.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-<<<<<<< HEAD:POS/POS.WEB/Migrations/PosAppContextModelSnapshot.cs
             modelBuilder.Entity("POS.Repository.Categories", b =>
-=======
-            modelBuilder.Entity("POS.Repository.CategoriesEntity", b =>
->>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122:POS/POS.DataContext/Migrations/ApplicationDBContextModelSnapshot.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -47,10 +45,10 @@ namespace POS.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tbl_category");
+                    b.ToTable("tbl_categories");
                 });
 
-            modelBuilder.Entity("POS.Repository.CustomersEntity", b =>
+            modelBuilder.Entity("POS.Repository.Customers", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -111,10 +109,10 @@ namespace POS.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tbl_customer");
+                    b.ToTable("tbl_customers");
                 });
 
-            modelBuilder.Entity("POS.Repository.EmployeesEntity", b =>
+            modelBuilder.Entity("POS.Repository.Employees", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -197,10 +195,10 @@ namespace POS.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tbl_employee");
+                    b.ToTable("tbl_employees");
                 });
 
-            modelBuilder.Entity("POS.Repository.OrderDetailsEntity", b =>
+            modelBuilder.Entity("POS.Repository.OrderDetails", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -216,7 +214,7 @@ namespace POS.Repository.Migrations
                     b.Property<int>("OrdersId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProductsId")
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<long>("Quantity")
@@ -231,12 +229,12 @@ namespace POS.Repository.Migrations
 
                     b.HasIndex("OrdersId");
 
-                    b.HasIndex("ProductsId");
+                    b.HasIndex("ProductId");
 
-                    b.ToTable("tbl_order_detail");
+                    b.ToTable("tbl_order_details");
                 });
 
-            modelBuilder.Entity("POS.Repository.OrdersEntity", b =>
+            modelBuilder.Entity("POS.Repository.Orders", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -249,15 +247,9 @@ namespace POS.Repository.Migrations
                         .HasColumnType("int")
                         .HasColumnName("customer_id");
 
-                    b.Property<int>("CustomersId")
-                        .HasColumnType("int");
-
                     b.Property<int>("EmployeeId")
                         .HasColumnType("int")
                         .HasColumnName("employee_id");
-
-                    b.Property<int>("EmployeesId")
-                        .HasColumnType("int");
 
                     b.Property<int>("Freight")
                         .HasColumnType("int")
@@ -266,6 +258,9 @@ namespace POS.Repository.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("order_date");
+
+                    b.Property<int?>("OrdersId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("RequiredDate")
                         .HasColumnType("datetime2")
@@ -281,25 +276,6 @@ namespace POS.Repository.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("ship_city");
 
-                    b.Property<string>("ShipCountry")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("ship_country");
-
-                    b.Property<string>("ShipPostalCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("ship_postal_code");
-
-                    b.Property<string>("ShipRegion")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("ship_region");
-
-                    b.Property<int>("ShipVia")
-                        .HasColumnType("int")
-                        .HasColumnName("ship_via");
-
                     b.Property<string>("Shipname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
@@ -311,14 +287,16 @@ namespace POS.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CustomersId");
+                    b.HasIndex("CustomerId");
 
-                    b.HasIndex("EmployeesId");
+                    b.HasIndex("EmployeeId");
 
-                    b.ToTable("tbl_order");
+                    b.HasIndex("OrdersId");
+
+                    b.ToTable("tbl_orders");
                 });
 
-            modelBuilder.Entity("POS.Repository.ProductsEntity", b =>
+            modelBuilder.Entity("POS.Repository.Products", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -326,6 +304,9 @@ namespace POS.Repository.Migrations
                         .HasColumnName("id");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CategoriesId")
+                        .HasColumnType("int");
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int")
@@ -354,26 +335,26 @@ namespace POS.Repository.Migrations
 
                     b.Property<int>("UnitInOrder")
                         .HasColumnType("int")
-                        .HasColumnName("unit_in_order");
+                        .HasColumnName("uni_in_order");
 
                     b.Property<int>("UnitInStock")
                         .HasColumnType("int")
-                        .HasColumnName("unit_in_stock");
+                        .HasColumnName("uni_in_stock");
 
-                    b.Property<int>("UnitPrice")
-                        .HasColumnType("int")
-                        .HasColumnName("unit_price");
+                    b.Property<double>("UnitPrice")
+                        .HasColumnType("float")
+                        .HasColumnName("unit_ptice");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
+                    b.HasIndex("CategoriesId");
 
                     b.HasIndex("SupplierId");
 
-                    b.ToTable("tbl_product");
+                    b.ToTable("tbl_products");
                 });
 
-            modelBuilder.Entity("POS.Repository.SuppliersEntity", b =>
+            modelBuilder.Entity("POS.Repository.Suppliers", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -439,106 +420,98 @@ namespace POS.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("tbl_supplier");
+                    b.ToTable("tbl_suppliers");
                 });
 
-            modelBuilder.Entity("POS.Repository.OrderDetailsEntity", b =>
+            modelBuilder.Entity("POS.Repository.OrderDetails", b =>
                 {
-                    b.HasOne("POS.Repository.OrdersEntity", "Orders")
-                        .WithMany("orderDetailsEntities")
+                    b.HasOne("POS.Repository.Orders", "Orders")
+                        .WithMany()
                         .HasForeignKey("OrdersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.ProductsEntity", "Products")
-                        .WithMany("orderDetailsEntities")
-                        .HasForeignKey("ProductsId")
+                    b.HasOne("POS.Repository.Products", "Product")
+                        .WithMany("OrderDetail")
+                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Orders");
 
-                    b.Navigation("Products");
+                    b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("POS.Repository.OrdersEntity", b =>
+            modelBuilder.Entity("POS.Repository.Orders", b =>
                 {
-                    b.HasOne("POS.Repository.CustomersEntity", "Customers")
-                        .WithMany("ordersEntities")
-                        .HasForeignKey("CustomersId")
+                    b.HasOne("POS.Repository.Customers", "Customer")
+                        .WithMany("Order")
+                        .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.EmployeesEntity", "Employees")
-                        .WithMany("ordersEntities")
-                        .HasForeignKey("EmployeesId")
+                    b.HasOne("POS.Repository.Employees", "Employee")
+                        .WithMany("Order")
+                        .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Customers");
+                    b.HasOne("POS.Repository.Orders", null)
+                        .WithMany("Order")
+                        .HasForeignKey("OrdersId");
 
-                    b.Navigation("Employees");
+                    b.Navigation("Customer");
+
+                    b.Navigation("Employee");
                 });
 
-            modelBuilder.Entity("POS.Repository.ProductsEntity", b =>
+            modelBuilder.Entity("POS.Repository.Products", b =>
                 {
-<<<<<<< HEAD:POS/POS.WEB/Migrations/PosAppContextModelSnapshot.cs
                     b.HasOne("POS.Repository.Categories", "Categories")
                         .WithMany("Products")
                         .HasForeignKey("CategoriesId")
-=======
-                    b.HasOne("POS.Repository.CategoriesEntity", "Category")
-                        .WithMany("productsEntities")
-                        .HasForeignKey("CategoryId")
->>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122:POS/POS.DataContext/Migrations/ApplicationDBContextModelSnapshot.cs
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.SuppliersEntity", "Supplier")
-                        .WithMany("productsEntities")
+                    b.HasOne("POS.Repository.Suppliers", "Supplier")
+                        .WithMany("Product")
                         .HasForeignKey("SupplierId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.Navigation("Categories");
 
                     b.Navigation("Supplier");
                 });
 
-<<<<<<< HEAD:POS/POS.WEB/Migrations/PosAppContextModelSnapshot.cs
             modelBuilder.Entity("POS.Repository.Categories", b =>
                 {
                     b.Navigation("Products");
-=======
-            modelBuilder.Entity("POS.Repository.CategoriesEntity", b =>
-                {
-                    b.Navigation("productsEntities");
->>>>>>> 2b5dceb2a14f9bb264b737b35273a99eaa081122:POS/POS.DataContext/Migrations/ApplicationDBContextModelSnapshot.cs
                 });
 
-            modelBuilder.Entity("POS.Repository.CustomersEntity", b =>
+            modelBuilder.Entity("POS.Repository.Customers", b =>
                 {
-                    b.Navigation("ordersEntities");
+                    b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("POS.Repository.EmployeesEntity", b =>
+            modelBuilder.Entity("POS.Repository.Employees", b =>
                 {
-                    b.Navigation("ordersEntities");
+                    b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("POS.Repository.OrdersEntity", b =>
+            modelBuilder.Entity("POS.Repository.Orders", b =>
                 {
-                    b.Navigation("orderDetailsEntities");
+                    b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("POS.Repository.ProductsEntity", b =>
+            modelBuilder.Entity("POS.Repository.Products", b =>
                 {
-                    b.Navigation("orderDetailsEntities");
+                    b.Navigation("OrderDetail");
                 });
 
-            modelBuilder.Entity("POS.Repository.SuppliersEntity", b =>
+            modelBuilder.Entity("POS.Repository.Suppliers", b =>
                 {
-                    b.Navigation("productsEntities");
+                    b.Navigation("Product");
                 });
 #pragma warning restore 612, 618
         }
