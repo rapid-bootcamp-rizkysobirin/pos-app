@@ -27,12 +27,6 @@ namespace POS.Web.Controllers
             return View(category);
         }
 
-        [HttpGet]
-        public IActionResult DetailsModal(int? id)
-        {
-            var category = _service.View(id);
-            return PartialView(category);
-        }
 
         [HttpGet]
         public IActionResult Add()
