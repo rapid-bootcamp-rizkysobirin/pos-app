@@ -36,10 +36,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcX0FkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/kontrak kerja/belajar.Net 3/pos-app3/pos-app/POS/POS.WEB/Views/Category/_Details .cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcX0RldGFpbHMgLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/kontrak kerja/belajar.Net 3/pos-app3/pos-app/POS/POS.WEB/Views/Customer/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -90,6 +86,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/kontrak kerja/belajar.Net 3/pos-app3/pos-app/POS/POS.WEB/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app3/pos-app/POS/POS.WEB/Views/Supplier/Add - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcQWRkIC0gQ29weS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/kontrak kerja/belajar.Net 3/pos-app3/pos-app/POS/POS.WEB/Views/Supplier/Add.cshtml]

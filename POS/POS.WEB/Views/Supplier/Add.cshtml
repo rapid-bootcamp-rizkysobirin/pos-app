@@ -1,7 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model POS.Repository.SuppliersEntity
+@model POS.ViewModel.SupplierModel
 
 @{
     ViewBag.Title = "New Supplier";
@@ -12,46 +12,66 @@
     <div class="form-group">
         <label asp-for="CompanyName">Company Name</label>
         <input asp-for="CompanyName" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="ContactName">Contact Name</label>
         <input asp-for="ContactName" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="ContactTitle">Contact Title</label>
-        <input asp-for="ContactTitle" class="form-control" />
+        <select asp-for="ContactTitle" class="form-select">
+            <option selected>Please Select One</option>
+            <option value="Consltant">Consltant</option>
+            <option value="Manager">Manager</option>
+            <option value="President">President</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Human Resource">Human Resource</option>
+            <option value="Developer">Developer</option>
+            <option value="General Manager">General Manager</option>
+        </select>
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Address">Address</label>
-        <input asp-for="Address" class="form-control" />
+        <textarea asp-for="Address" class="form-control"></textarea>
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="City">City</label>
         <input asp-for="City" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Region">Region</label>
         <input asp-for="Region" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="PostalCode">Postal Code</label>
         <input asp-for="PostalCode" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Country">Country</label>
         <input asp-for="Country" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Phone">Phone</label>
         <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Fax">Fax</label>
         <input asp-for="Fax" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="HomePage">Home Page</label>
         <input asp-for="HomePage" class="form-control" />
+        <span asp-validation-for="CompanyName" class="text-danger"></span>
     </div>
     <div class="form-footer">
         <button type="submit" class="btn btn-primary">Save</button>

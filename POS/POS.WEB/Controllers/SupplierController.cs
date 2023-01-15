@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using POS.Repository;
 using POS.Service;
+using POS.ViewModel;
 
 namespace POS.Web.Controllers
 {
@@ -12,6 +13,7 @@ namespace POS.Web.Controllers
             _service = new SupplierService(context);
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             var data = _service.GetSuppliers();
@@ -30,11 +32,25 @@ namespace POS.Web.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Save([Bind("CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, County, Phone, Fax, Homepage")] SuppliersEntity request)
+
+        [HttpGet]
+        public IActionResult AddModal()
         {
-            _service.Add(request);
-            return Redirect("Index");
+            return PartialView("_Add");
+        }
+
+        [HttpPost]
+        public IActionResult Save([Bind("CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax, HomePage")] SupplierModel request)
+        {
+            /*_service.Add(request);
+            return Redirect("Index");*/
+
+            if(ModelState.IsValid)
+            {
+                _service.Add(new SuppliersEntity(request));
+                return Redirect("Index");
+            }
+            return View("Add", request);
         }
 
         [HttpGet]
@@ -51,10 +67,17 @@ namespace POS.Web.Controllers
             return View(supplier);
         }
         [HttpPost]
-        public IActionResult Update([Bind("Id, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, County, Phone, Fax, Homepage")] SuppliersEntity supplier)
+        public IActionResult Update([Bind("Id, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax, HomePage")] SupplierModel supplier)
         {
-            _service.Update(supplier);
-            return Redirect("Index");
+            /*_service.Update(supplier);
+            return Redirect("Index");*/
+
+            if (ModelState.IsValid)
+            {
+                _service.Update(supplier);
+                return Redirect("Index");
+            }
+            return View("Edit", supplier);
         }
     }
 }
