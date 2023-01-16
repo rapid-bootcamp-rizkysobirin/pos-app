@@ -12,7 +12,7 @@ using POS.Repository;
 namespace POS.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20230115080301_addTables")]
+    [Migration("20230116034502_addTables")]
     partial class addTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

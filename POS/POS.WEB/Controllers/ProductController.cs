@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using POS.Repository;
-using POS.S;
 using POS.Service;
 using POS.ViewModel;
 
@@ -23,8 +22,8 @@ namespace POS.Web.Controllers
         [HttpGet]
         public IActionResult Details(int? id)
         {
-            /*        var product = _service.View(id);*/
-            var product = _service.ViewProductResponse(id);
+            var product = _service.View(id);
+            /*var product = _service.ViewProductResponse(id);*/
             return View(product);
         }
 
@@ -62,8 +61,8 @@ namespace POS.Web.Controllers
         [HttpGet]
         public IActionResult Edit(int? id)
         {
-            /*var product = _service.View(id);*/
             var product = _service.View(id);
+           /* var product = _service.View(id);*/
             return View(product);
         }
         [HttpPost]

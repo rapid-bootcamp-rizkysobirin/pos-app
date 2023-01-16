@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "h3H6jgFup94PlMgTstnf2J4JGt0wFMh/cl1hl+mmtZJsMzolUR3Y4W24ryEHw9XCnNJ7jqSwCRvJi/0XQwG6qQ==",
+  "dgSpecHash": "LWIRyKvfBNODFHMc5ScZt7z7X0AWcSCdD1wn/l3r7n4xjQ94LDmYu8w0Zbn5CSTT7hHbte3k4IGszILnFDfSAw==",
   "success": true,
-  "projectFilePath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.WEB\\POS.Web.csproj",
+  "projectFilePath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.WEB\\POS.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\natadekoko\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\natadekoko\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

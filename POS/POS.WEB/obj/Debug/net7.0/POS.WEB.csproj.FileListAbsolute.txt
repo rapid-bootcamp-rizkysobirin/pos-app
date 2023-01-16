@@ -280,3 +280,5 @@ D:\kontrak kerja\belajar.Net 3\pos-app3\pos-app\POS\POS.WEB\obj\Debug\net7.0\ref
 D:\kontrak kerja\belajar.Net 3\pos-app3\pos-app\POS\POS.WEB\obj\Debug\net7.0\POS.Web.pdb
 D:\kontrak kerja\belajar.Net 3\pos-app3\pos-app\POS\POS.WEB\obj\Debug\net7.0\POS.Web.genruntimeconfig.cache
 D:\kontrak kerja\belajar.Net 3\pos-app3\pos-app\POS\POS.WEB\obj\Debug\net7.0\ref\POS.Web.dll
+D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.WEB\bin\Debug\net7.0\POS.ViewModel.dll
+D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.WEB\bin\Debug\net7.0\POS.ViewModel.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj": {}
+    "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj": {}
   },
   "projects": {
-    "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj": {
+    "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj",
+        "projectUniqueName": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj",
         "projectName": "POS.ViewModel",
-        "projectPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj",
+        "projectPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.ViewModel\\POS.ViewModel.csproj",
         "packagesPath": "C:\\Users\\natadekoko\\.nuget\\packages\\",
-        "outputPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app3\\pos-app\\POS\\POS.ViewModel\\obj\\",
+        "outputPath": "D:\\kontrak kerja\\belajar.Net 3\\pos-app\\POS\\POS.ViewModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\natadekoko\\AppData\\Roaming\\NuGet\\NuGet.Config",
