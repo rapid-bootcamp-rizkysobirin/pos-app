@@ -7,8 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = POS.WEB
-build_property.RootNamespace = POS.WEB
+build_property.RootNamespace = POS.Web
+build_property.RootNamespace = POS.Web
 build_property.ProjectDir = D:\kontrak kerja\belajar.Net 3\pos-app\POS\POS.WEB\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
@@ -56,12 +56,72 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJcX0FkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Employee/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Employee/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Employee/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Employee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Employee/_Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcX0FkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/OrderDetail/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/OrderDetail/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/OrderDetail/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/OrderDetail/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/OrderDetail/_Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJEZXRhaWxcX0FkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Order/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Order/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Order/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Order/_Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcX0FkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Product/Add.cshtml]
@@ -122,4 +182,4 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/kontrak kerja/belajar.Net 3/pos-app/POS/POS.WEB/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-pkp2lz3eik
+build_metadata.AdditionalFiles.CssScope = b-3uy6bn8efq

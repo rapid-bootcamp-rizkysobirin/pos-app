@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace POS.Repository.Migrations
 {
-    public partial class AddTable : Migration
+    public partial class addTables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "tbl_categorie",
+                name: "tbl_category",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
@@ -20,7 +20,7 @@ namespace POS.Repository.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_tbl_categorie", x => x.id);
+                    table.PrimaryKey("PK_tbl_category", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -65,7 +65,8 @@ namespace POS.Repository.Migrations
                     home_phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     extension = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     notes = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    report_to = table.Column<int>(type: "int", nullable: false)
+                    report_to = table.Column<int>(type: "int", nullable: false),
+                    photo_path = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -102,9 +103,7 @@ namespace POS.Repository.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     customer_id = table.Column<int>(type: "int", nullable: false),
-                    CustomersId = table.Column<int>(type: "int", nullable: false),
                     employee_id = table.Column<int>(type: "int", nullable: false),
-                    EmployeesId = table.Column<int>(type: "int", nullable: false),
                     order_date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     required_date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     shipped_date = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -121,14 +120,14 @@ namespace POS.Repository.Migrations
                 {
                     table.PrimaryKey("PK_tbl_order", x => x.id);
                     table.ForeignKey(
-                        name: "FK_tbl_order_tbl_customer_CustomersId",
-                        column: x => x.CustomersId,
+                        name: "FK_tbl_order_tbl_customer_customer_id",
+                        column: x => x.customer_id,
                         principalTable: "tbl_customer",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_tbl_order_tbl_employee_EmployeesId",
-                        column: x => x.EmployeesId,
+                        name: "FK_tbl_order_tbl_employee_employee_id",
+                        column: x => x.employee_id,
                         principalTable: "tbl_employee",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
@@ -141,8 +140,8 @@ namespace POS.Repository.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     product_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SupplierId = table.Column<int>(type: "int", nullable: false),
-                    CategoryId = table.Column<int>(type: "int", nullable: false),
+                    supplier_id = table.Column<int>(type: "int", nullable: false),
+                    category_id = table.Column<int>(type: "int", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false),
                     unit_price = table.Column<int>(type: "int", nullable: false),
                     unit_in_stock = table.Column<int>(type: "int", nullable: false),
@@ -154,14 +153,14 @@ namespace POS.Repository.Migrations
                 {
                     table.PrimaryKey("PK_tbl_product", x => x.id);
                     table.ForeignKey(
-                        name: "FK_tbl_product_tbl_categorie_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "tbl_categorie",
+                        name: "FK_tbl_product_tbl_category_category_id",
+                        column: x => x.category_id,
+                        principalTable: "tbl_category",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_tbl_product_tbl_supplier_SupplierId",
-                        column: x => x.SupplierId,
+                        name: "FK_tbl_product_tbl_supplier_supplier_id",
+                        column: x => x.supplier_id,
                         principalTable: "tbl_supplier",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
@@ -173,8 +172,8 @@ namespace POS.Repository.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    OrdersId = table.Column<int>(type: "int", nullable: false),
-                    ProductsId = table.Column<int>(type: "int", nullable: false),
+                    order_id = table.Column<int>(type: "int", nullable: false),
+                    product_id = table.Column<int>(type: "int", nullable: false),
                     unit_price = table.Column<int>(type: "int", nullable: false),
                     quantity = table.Column<long>(type: "bigint", nullable: false),
                     discount = table.Column<double>(type: "float", nullable: false)
@@ -183,48 +182,48 @@ namespace POS.Repository.Migrations
                 {
                     table.PrimaryKey("PK_tbl_order_detail", x => x.id);
                     table.ForeignKey(
-                        name: "FK_tbl_order_detail_tbl_order_OrdersId",
-                        column: x => x.OrdersId,
+                        name: "FK_tbl_order_detail_tbl_order_order_id",
+                        column: x => x.order_id,
                         principalTable: "tbl_order",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_tbl_order_detail_tbl_product_ProductsId",
-                        column: x => x.ProductsId,
+                        name: "FK_tbl_order_detail_tbl_product_product_id",
+                        column: x => x.product_id,
                         principalTable: "tbl_product",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_tbl_order_CustomersId",
+                name: "IX_tbl_order_customer_id",
                 table: "tbl_order",
-                column: "CustomersId");
+                column: "customer_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_tbl_order_EmployeesId",
+                name: "IX_tbl_order_employee_id",
                 table: "tbl_order",
-                column: "EmployeesId");
+                column: "employee_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_tbl_order_detail_OrdersId",
+                name: "IX_tbl_order_detail_order_id",
                 table: "tbl_order_detail",
-                column: "OrdersId");
+                column: "order_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_tbl_order_detail_ProductsId",
+                name: "IX_tbl_order_detail_product_id",
                 table: "tbl_order_detail",
-                column: "ProductsId");
+                column: "product_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_tbl_product_CategoryId",
+                name: "IX_tbl_product_category_id",
                 table: "tbl_product",
-                column: "CategoryId");
+                column: "category_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_tbl_product_SupplierId",
+                name: "IX_tbl_product_supplier_id",
                 table: "tbl_product",
-                column: "SupplierId");
+                column: "supplier_id");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -245,7 +244,7 @@ namespace POS.Repository.Migrations
                 name: "tbl_employee");
 
             migrationBuilder.DropTable(
-                name: "tbl_categorie");
+                name: "tbl_category");
 
             migrationBuilder.DropTable(
                 name: "tbl_supplier");

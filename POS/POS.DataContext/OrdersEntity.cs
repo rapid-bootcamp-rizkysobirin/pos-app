@@ -12,18 +12,17 @@ namespace POS.Repository
     public class OrdersEntity
     {
         [Key]
-
         [Column("id")]
         public int Id { get; set; }
 
 
         [Column("customer_id")]
         public int CustomerId { get; set; }
-        public CustomersEntity Customers { get; set; } //buat menghubungkan table
+        public CustomersEntity Customer { get; set; } //buat menghubungkan table
 
         [Column("employee_id")]
         public int EmployeeId { get; set; }
-        public EmployeesEntity Employees { get; set; }
+        public EmployeesEntity Employee { get; set; }
 
 
         [Required]
@@ -74,6 +73,7 @@ namespace POS.Repository
             OrderDate = model.OrderDate;
             RequiredDate = model.RequiredDate;
             ShippedDate = model.ShippedDate;
+            ShipVia = model.ShipVia;
             Freight = model.Freight;
             ShipName = model.ShipName;
             ShipAddress = model.ShipAddress;
