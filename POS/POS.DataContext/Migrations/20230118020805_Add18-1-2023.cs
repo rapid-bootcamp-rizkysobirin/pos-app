@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace POS.Repository.Migrations
 {
-    public partial class addTables : Migration
+    public partial class Add1812023 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -175,8 +175,8 @@ namespace POS.Repository.Migrations
                     order_id = table.Column<int>(type: "int", nullable: false),
                     product_id = table.Column<int>(type: "int", nullable: false),
                     unit_price = table.Column<int>(type: "int", nullable: false),
-                    quantity = table.Column<long>(type: "bigint", nullable: false),
-                    discount = table.Column<double>(type: "float", nullable: false)
+                    quantity = table.Column<int>(type: "int", nullable: false),
+                    discount = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -14,6 +14,8 @@ namespace POS.Web.Controllers
         {
             _service = new OrderService(context);
         }
+
+        [HttpGet]
         public IActionResult Index()
         {
             var data = _service.GetOrders();
@@ -42,14 +44,14 @@ namespace POS.Web.Controllers
 
         [HttpPost]
         public IActionResult Save(
-            [Bind("CustomerId,EmployeeId,OrderDate,RequiredDate,ShippedDate,shipVia,Freight,sShipName,ShipAddress,ShipCity,ShipRegion,ShipPostalCode,ShipCountry")] OrderModel request)
+            [Bind("CustomerId, EmployeeId, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry")] OrderModel request)
         {
             if (ModelState.IsValid)
             {
                 _service.Add(new OrdersEntity(request));
                 return Redirect("Index");
             }
-            return View("Add", request);
+            return View("_Add", request);
         }
 
         [HttpGet]
@@ -68,7 +70,7 @@ namespace POS.Web.Controllers
 
         [HttpPost]
         public IActionResult Update(
-            [Bind("Id,CustomerId,EmployeeId,OrderDate,RequiredDate,ShippedDate,ShipVia,Freight,ShipName,ShipAddress,ShipCity,ShipRegion,ShipPostalCode,ShipCountry")] OrderModel request)
+            [Bind("Id, CustomerId, EmployeeId, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry")] OrderModel request)
         {
             if (ModelState.IsValid)
             {

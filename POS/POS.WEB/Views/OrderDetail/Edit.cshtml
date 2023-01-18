@@ -11,13 +11,13 @@
 <form asp-controller="OrderDetail" asp-action="Update" method="post">
     <input type="hidden" asp-for="Id" />
     <div class="form-group">
-        <label asp-for="OrdersId">Order</label>
-        <select asp-for="OrdersId" class="form-control">
+        <label asp-for="OrderId">Order Id</label>
+        <select asp-for="OrderId" class="form-control">
             <option>Pilih Order</option>
             <option value="1">Order 1</option>
             <option value="2">Order 2</option>
         </select>
-        <span asp-validation-for="OrdersId" class="text-danger" />
+        <span asp-validation-for="OrderId" class="text-danger" />
     </div>
     <div class="form-group">
         <label asp-for="ProductId">Product</label>

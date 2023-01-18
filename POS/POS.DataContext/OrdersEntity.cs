@@ -18,10 +18,12 @@ namespace POS.Repository
 
         [Column("customer_id")]
         public int CustomerId { get; set; }
+        [Required]
         public CustomersEntity Customer { get; set; } //buat menghubungkan table
 
         [Column("employee_id")]
         public int EmployeeId { get; set; }
+        [Required]
         public EmployeesEntity Employee { get; set; }
 
 

@@ -15,7 +15,7 @@ namespace POS.Service
         {
             OrderDetailModel result= new OrderDetailModel();
             result.Id= entity.Id;
-            result.OrdersId = entity.OrderId;
+            result.OrderId = entity.OrderId;
             result.ProductId= entity.ProductId;
             result.UnitPrice= entity.UnitPrice;
             result.Quantity = entity.Quantity;
@@ -26,7 +26,7 @@ namespace POS.Service
 
         private void ModelToEntity(OrderDetailModel model, OrderDetailsEntity entity)
         {
-            entity.OrderId = model.OrdersId;
+            entity.OrderId = model.OrderId;
             entity.ProductId= model.ProductId;
             entity.UnitPrice= model.UnitPrice;
             entity.Quantity = model.Quantity;
@@ -51,7 +51,7 @@ namespace POS.Service
 
         public OrderDetailModel View(int? id)
         {
-            var orderDetail = _context.orderDetailsEntities.Find();
+            var orderDetail = _context.orderDetailsEntities.Find(id);
             return EntityToModel(orderDetail);
         }
 

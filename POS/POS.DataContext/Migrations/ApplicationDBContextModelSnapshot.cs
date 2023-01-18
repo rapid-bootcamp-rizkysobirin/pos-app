@@ -210,8 +210,8 @@ namespace POS.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<double>("Discount")
-                        .HasColumnType("float")
+                    b.Property<int>("Discount")
+                        .HasColumnType("int")
                         .HasColumnName("discount");
 
                     b.Property<int>("OrderId")
@@ -222,8 +222,8 @@ namespace POS.Repository.Migrations
                         .HasColumnType("int")
                         .HasColumnName("product_id");
 
-                    b.Property<long>("Quantity")
-                        .HasColumnType("bigint")
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int")
                         .HasColumnName("quantity");
 
                     b.Property<int>("UnitPrice")

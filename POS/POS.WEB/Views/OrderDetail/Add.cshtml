@@ -11,13 +11,17 @@
 
 <form asp-controller="OrderDetail" asp-action="Save" method="post">
     <div class="form-group">
-        <label asp-for="OrdersId">Order</label>
-        <select asp-for="OrdersId" class="form-control">
+        <label asp-for="OrderId">Order</label>
+        <select asp-for="OrderId" class="form-control">
             <option>Pilih Order</option>
             <option value="1">Order 1</option>
             <option value="2">Order 2</option>
+            <option value="3">Order 3</option>
+            <option value="4">Order 4</option>
+            <option value="5">Order 5</option>
+            <option value="6">Order 6</option>
         </select>
-        <span asp-validation-for="OrdersId" class="text-danger" />
+        <span asp-validation-for="OrderId" class="text-danger" />
     </div>
     <div class="form-group">
         <label asp-for="ProductId">Product</label>
@@ -26,6 +30,9 @@
             <option value="1">Product 1</option>
             <option value="2">Product 2</option>
             <option value="3">Product 3</option>
+            <option value="4">Product 4</option>
+            <option value="5">Product 5</option>
+            <option value="6">Product 6</option>
         </select>
         <span asp-validation-for="ProductId" class="text-danger" />
     </div>

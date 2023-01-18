@@ -9,21 +9,28 @@
 
 <form asp-controller="Order" asp-action="Save" method="post">
     <div class="form-group">
-        <label asp-for="CustomerId">Supplier</label>
+        <label asp-for="CustomerId">Customer ID</label>
         <select asp-for="CustomerId" class="form-control">
             <option>Pilih Customer</option>
             <option value="1">Customer 1</option>
             <option value="2">Customer 2</option>
+            <option value="3">Customer 3</option>
+            <option value="4">Customer 4</option>
+            <option value="5">Customer 5</option>
+            <option value="6">Customer 6</option>
         </select>
         <span asp-validation-for="CustomerId" class="text-danger" />
     </div>
     <div class="form-group">
-        <label asp-for="EmployeeId">Category</label>
+        <label asp-for="EmployeeId">Employee ID</label>
         <select asp-for="EmployeeId" class="form-control">
             <option>Pilih Employee</option>
             <option value="1">Employee 1</option>
             <option value="2">Employee 2</option>
             <option value="3">Employee 3</option>
+            <option value="4">Employee 4</option>
+            <option value="5">Employee 5</option>
+            <option value="6">Employee 6</option>
         </select>
         <span asp-validation-for="EmployeeId" class="text-danger" />
     </div>
