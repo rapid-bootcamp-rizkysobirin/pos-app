@@ -17,25 +17,31 @@
     </div>
     <div class="form-group">
         <label asp-for="SupplierId">Supplier Id</label>
-        <select asp-for="SupplierId" class="form-control">
+        @*<select asp-for="SupplierId" class="form-control">
             <option selected>Select the Supplier</option>
             <option value=1>Supplier 1</option>
             <option value=2>Supplier 2</option>
             <option value=3>Supplier 3</option>
             <option value=4>Supplier 4</option>
             <option value=5>Supplier 5</option>
+        </select>*@
+        <select type="text" class="form-control" asp-for="SupplierId" asp-items="@ViewBag.Suppliers">
+            <option selected>Select Supplier</option>
         </select>
         <span asp-validation-for="SupplierId" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="CategoryId">Category Id</label>
-        <select asp-for="CategoryId" class="form-control">
+        @*<select asp-for="CategoryId" class="form-control">
             <option selected>Select the Category</option>
             <option value=1>Category 1</option>
             <option value=2>Category 2</option>
             <option value=3>Category 3</option>
             <option value=4>Category 4</option>
             <option value=5>Category 5</option>
+        </select>*@
+        <select type="text" class="form-control" asp-for="CategoryId" asp-items="@ViewBag.Categories">
+            <option selected>Select Category</option>
         </select>
         <span asp-validation-for="CategoryId" class="text-danger"></span>
     </div>

@@ -10,7 +10,7 @@
 <form asp-controller="Order" asp-action="Save" method="post">
     <div class="form-group">
         <label asp-for="CustomerId">Customer ID</label>
-        <select asp-for="CustomerId" class="form-control">
+        @*<select asp-for="CustomerId" class="form-control">
             <option>Pilih Customer</option>
             <option value="1">Customer 1</option>
             <option value="2">Customer 2</option>
@@ -18,12 +18,15 @@
             <option value="4">Customer 4</option>
             <option value="5">Customer 5</option>
             <option value="6">Customer 6</option>
+        </select>*@
+        <select type="text" class="form-control" asp-for="CustomerId" asp-items="@ViewBag.Customer">
+            <option selected>Select Customer</option>
         </select>
         <span asp-validation-for="CustomerId" class="text-danger" />
     </div>
     <div class="form-group">
         <label asp-for="EmployeeId">Employee ID</label>
-        <select asp-for="EmployeeId" class="form-control">
+        @*<select asp-for="EmployeeId" class="form-control">
             <option>Pilih Employee</option>
             <option value="1">Employee 1</option>
             <option value="2">Employee 2</option>
@@ -31,22 +34,25 @@
             <option value="4">Employee 4</option>
             <option value="5">Employee 5</option>
             <option value="6">Employee 6</option>
+        </select>*@
+        <select type="text" class="form-control" asp-for="EmployeeId" asp-items="@ViewBag.employee">
+            <option selected>Select Employee</option>
         </select>
         <span asp-validation-for="EmployeeId" class="text-danger" />
     </div>
     <div class="form-group">
         <label asp-for="OrderDate">Order Date</label>
-        <input asp-for="OrderDate" class="form-control" />
+        <input asp-for="OrderDate" class="form-control" type="date"/>
         <span asp-validation-for="OrderDate" class="text-danger" />
     </div>
     <div class="form-group">
         <label asp-for="RequiredDate">Required Date</label>
-        <input asp-for="RequiredDate" class="form-control" />
+        <input asp-for="RequiredDate" class="form-control" type="date" />
         <span asp-validation-for="RequiredDate" class="text-danger" />
     </div>
     <div class="form-group">
         <label asp-for="ShippedDate">Shipped Date</label>
-        <input asp-for="ShippedDate" class="form-control" />
+        <input asp-for="ShippedDate" class="form-control" type="date" />
         <span asp-validation-for="ShippedDate" class="text-danger" />
     </div>
     <div class="form-group">
