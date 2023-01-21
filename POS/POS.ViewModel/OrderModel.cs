@@ -36,5 +36,7 @@ namespace POS.ViewModel
         public string ShipPostalCode { get; set;}
         [Required]
         public string ShipCountry { get; set; }
+
+        public List<OrderDetailModel> Details { get; set; }
     }
 }

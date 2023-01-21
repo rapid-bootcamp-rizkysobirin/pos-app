@@ -22,6 +22,7 @@ namespace POS.Repository
         public DbSet<SuppliersEntity> supplierEntities => Set<SuppliersEntity>();
         public DbSet<OrdersEntity> orderEntities => Set<OrdersEntity>();
         public DbSet<OrderDetailsEntity> orderDetailsEntities => Set<OrderDetailsEntity>(); 
+        public DbSet<ShipperEntity> shipperEntities => Set<ShipperEntity>();
 
     }
 }

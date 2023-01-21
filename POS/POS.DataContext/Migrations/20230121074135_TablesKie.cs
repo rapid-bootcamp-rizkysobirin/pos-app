@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace POS.Repository.Migrations
 {
-    public partial class Add1812023 : Migration
+    public partial class TablesKie : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -74,6 +74,20 @@ namespace POS.Repository.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "tbl_shipper",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    company_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    phone = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tbl_shipper", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "tbl_supplier",
                 columns: table => new
                 {
@@ -114,7 +128,8 @@ namespace POS.Repository.Migrations
                     ship_city = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ship_region = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ship_postal_code = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ship_country = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    ship_country = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ShipperEntityId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -131,6 +146,11 @@ namespace POS.Repository.Migrations
                         principalTable: "tbl_employee",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_tbl_order_tbl_shipper_ShipperEntityId",
+                        column: x => x.ShipperEntityId,
+                        principalTable: "tbl_shipper",
+                        principalColumn: "id");
                 });
 
             migrationBuilder.CreateTable(
@@ -206,6 +226,11 @@ namespace POS.Repository.Migrations
                 column: "employee_id");
 
             migrationBuilder.CreateIndex(
+                name: "IX_tbl_order_ShipperEntityId",
+                table: "tbl_order",
+                column: "ShipperEntityId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_tbl_order_detail_order_id",
                 table: "tbl_order_detail",
                 column: "order_id");
@@ -242,6 +267,9 @@ namespace POS.Repository.Migrations
 
             migrationBuilder.DropTable(
                 name: "tbl_employee");
+
+            migrationBuilder.DropTable(
+                name: "tbl_shipper");
 
             migrationBuilder.DropTable(
                 name: "tbl_category");

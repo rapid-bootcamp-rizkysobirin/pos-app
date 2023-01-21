@@ -56,6 +56,7 @@ namespace POS.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                 
                 _service.Add(new OrdersEntity(request));
                 return Redirect("Index");
             }
@@ -88,6 +89,12 @@ namespace POS.Web.Controllers
                 return Redirect("Index");
             }
             return View("Edit", request);
+        }
+
+        public IActionResult Detail()
+        {
+            OrderModel order = new OrderModel();
+            return View();
         }
     }
 }
