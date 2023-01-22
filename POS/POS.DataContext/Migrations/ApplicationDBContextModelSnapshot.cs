@@ -65,11 +65,6 @@ namespace POS.Repository.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("city");
 
-                    b.Property<string>("CompanyName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("company_name");
-
                     b.Property<string>("ContactName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
@@ -84,6 +79,11 @@ namespace POS.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("country");
+
+                    b.Property<string>("CustomerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("customer_name");
 
                     b.Property<string>("Fax")
                         .IsRequired()
@@ -306,8 +306,9 @@ namespace POS.Repository.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("shipped_date");
 
-                    b.Property<int?>("ShipperEntityId")
-                        .HasColumnType("int");
+                    b.Property<int>("ShipperId")
+                        .HasColumnType("int")
+                        .HasColumnName("shipper_id");
 
                     b.HasKey("Id");
 
@@ -315,7 +316,7 @@ namespace POS.Repository.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.HasIndex("ShipperEntityId");
+                    b.HasIndex("ShipperId");
 
                     b.ToTable("tbl_order");
                 });
@@ -501,13 +502,17 @@ namespace POS.Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("POS.Repository.ShipperEntity", null)
+                    b.HasOne("POS.Repository.ShipperEntity", "Shipper")
                         .WithMany("OrderEntities")
-                        .HasForeignKey("ShipperEntityId");
+                        .HasForeignKey("ShipperId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Customer");
 
                     b.Navigation("Employee");
+
+                    b.Navigation("Shipper");
                 });
 
             modelBuilder.Entity("POS.Repository.ProductsEntity", b =>

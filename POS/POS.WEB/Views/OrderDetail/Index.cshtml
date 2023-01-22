@@ -6,8 +6,8 @@
     ViewBag.Title = "OrderDetail";
     Layout = "_Layout";
 }
-<h2>OrderDetail</h2>
-<a asp-action="Add" class="btn btn-primary" role="button" id="btn-add">Add Order Detail</a>
+<h2>Order Detail</h2>
+@*<a asp-action="Add" class="btn btn-primary" role="button" id="btn-add">Add Order Detail</a>*@
 <table class="table table-responsive">
     <thead>
         <tr>
@@ -17,7 +17,7 @@
             <th>Unit Price</th>
             <th>Quantity</th>
             <th>Discount</th>
-            <th>Action</th>
+@*            <th>Action</th>*@
         </tr>
     </thead>
     <tbody>
@@ -30,11 +30,11 @@
                 <td>@item.UnitPrice</td>
                 <td>@item.Quantity</td>
                 <td>@item.Discount</td>
-                <td>
+@*                <td>
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
                     <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-success">View</a>
                     <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
-                </td>
+                </td>*@
             </tr>
         }
     </tbody>

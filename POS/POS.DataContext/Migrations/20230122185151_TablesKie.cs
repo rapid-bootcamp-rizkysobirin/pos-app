@@ -29,7 +29,7 @@ namespace POS.Repository.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    company_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    customer_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     contact_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     contact_title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     address = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -121,6 +121,7 @@ namespace POS.Repository.Migrations
                     order_date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     required_date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     shipped_date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    shipper_id = table.Column<int>(type: "int", nullable: false),
                     ship_via = table.Column<int>(type: "int", nullable: false),
                     freight = table.Column<int>(type: "int", nullable: false),
                     ship_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -128,8 +129,7 @@ namespace POS.Repository.Migrations
                     ship_city = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ship_region = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ship_postal_code = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ship_country = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ShipperEntityId = table.Column<int>(type: "int", nullable: true)
+                    ship_country = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -147,10 +147,11 @@ namespace POS.Repository.Migrations
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_tbl_order_tbl_shipper_ShipperEntityId",
-                        column: x => x.ShipperEntityId,
+                        name: "FK_tbl_order_tbl_shipper_shipper_id",
+                        column: x => x.shipper_id,
                         principalTable: "tbl_shipper",
-                        principalColumn: "id");
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -226,9 +227,9 @@ namespace POS.Repository.Migrations
                 column: "employee_id");
 
             migrationBuilder.CreateIndex(
-                name: "IX_tbl_order_ShipperEntityId",
+                name: "IX_tbl_order_shipper_id",
                 table: "tbl_order",
-                column: "ShipperEntityId");
+                column: "shipper_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_tbl_order_detail_order_id",
