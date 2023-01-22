@@ -248,7 +248,6 @@ namespace POS.Service
                 }
 
             }
-            // save updated order & order entity
             _context.SaveChanges();
 
 

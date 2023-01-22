@@ -84,7 +84,7 @@ namespace POS.Web.Controllers
         [HttpGet]
         public IActionResult Edit(int? id)
         {
-            ViewBag.Customer = new SelectList(_serviceCustomer.GetCustomers(), "Id", "CompanyName");
+            ViewBag.Customer = new SelectList(_serviceCustomer.GetCustomers(), "Id", "CustomerName");
             ViewBag.Employee = new SelectList(_serviceEmployee.GetEmployees(), "Id", "FirstName");
             ViewBag.Shipper = new SelectList(_serviceShipper.GetShipper(), "Id", "CompanyName");
             ViewBag.Product = new SelectList(_serviceProduct.GetProducts(), "Id", "ProductName");
@@ -94,7 +94,7 @@ namespace POS.Web.Controllers
 
         [HttpPost]
         public IActionResult Update(
-            [Bind("Id, CustomerId, EmployeeId, OrderDate, RequiredDate, ShippedDate, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry,OrderDetailsModel")] OrderModel request)
+            [Bind("Id, CustomerId, EmployeeId, OrderDate, RequiredDate, ShippedDate, ShipperId, ShipVia, Freight, ShipName, ShipAddress, ShipCity, ShipRegion, ShipPostalCode, ShipCountry,OrderDetailsModel")] OrderModel request)
         {
             if (ModelState.IsValid)
             {
