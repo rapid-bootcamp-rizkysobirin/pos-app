@@ -39,6 +39,7 @@ namespace POS.Repository
 
         public OrderDetailsEntity(POS.ViewModel.OrderDetailModel model)
         {
+            Id = model.Id;
             OrderId = model.OrderId;
             ProductId= model.ProductId;
             UnitPrice = model.UnitPrice;

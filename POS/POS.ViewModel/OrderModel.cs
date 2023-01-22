@@ -20,6 +20,10 @@ namespace POS.ViewModel
         public DateTime RequiredDate { get; set; }
         [Required]
         public DateTime ShippedDate { get; set;}
+
+        [Required]
+        public int ShipperId { get; set; }
+
         [Required]
         public int ShipVia { get; set; }
         [Required]
@@ -37,6 +41,6 @@ namespace POS.ViewModel
         [Required]
         public string ShipCountry { get; set; }
 
-        public List<OrderDetailModel> Details { get; set; }
+        public List<OrderDetailModel> OrderDetailsModel { get; set; }
     }
 }

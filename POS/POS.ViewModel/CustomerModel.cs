@@ -11,7 +11,7 @@ namespace POS.ViewModel
     {
         public int Id { get; set; }
         [Required]
-        public string CompanyName { get; set; }
+        public string CustomerName { get; set; }
 
         [Required]
         public string ContactName { get; set; }

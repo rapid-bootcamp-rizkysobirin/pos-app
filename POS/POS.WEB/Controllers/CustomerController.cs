@@ -38,7 +38,7 @@ namespace POS.Web.Controllers
             return PartialView("_Add");
         }
         [HttpPost]
-        public IActionResult Save([Bind("CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax")] CustomerModel request) //CustomersEntity klo class entity tanpa validasi
+        public IActionResult Save([Bind("CustomerName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax")] CustomerModel request) //CustomersEntity klo class entity tanpa validasi
         {
             //tanpa validasi
             /*_service.Add(request);
@@ -68,7 +68,7 @@ namespace POS.Web.Controllers
             return View(customer);
         }
         [HttpPost]
-        public IActionResult Update([Bind("Id, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax")] CustomerModel customer)// model untuk validasi, entity tnpa validasi
+        public IActionResult Update([Bind("Id, CustommerName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax")] CustomerModel customer)// model untuk validasi, entity tnpa validasi
         {
             //tanpa validasi
             /*_service.Update(customer);
